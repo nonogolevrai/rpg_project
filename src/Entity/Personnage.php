@@ -40,6 +40,9 @@ class Personnage
     #[ORM\Column]
     private ?int $combat = null;
 
+    #[ORM\Column]
+    private ?int $user = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -154,6 +157,18 @@ class Personnage
     public function setCombat(int $combat): static
     {
         $this->combat = $combat;
+
+        return $this;
+    }
+
+    public function getUser(): ?int
+    {
+        return $this->user;
+    }
+
+    public function setUser(int $user): static
+    {
+        $this->user = $user;
 
         return $this;
     }

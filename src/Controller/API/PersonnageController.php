@@ -122,7 +122,7 @@ public function update(Personnage $personnage, Request $request, EntityManagerIn
     
 
     $imageFile = $request->files->get('image');
-    dd($imageFile);
+    //dd($imageFile);
 
     if ($imageFile) {
         $newFilename = md5(uniqid()) . '.' . $imageFile->guessExtension();
